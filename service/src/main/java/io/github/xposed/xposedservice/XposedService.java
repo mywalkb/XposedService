@@ -3,7 +3,6 @@ package io.github.xposed.xposedservice;
 import android.os.IBinder;
 import android.os.RemoteException;
 
-import io.github.xposed.xposedservice.utils.ParceledListSlice;
 import io.github.xposed.xposedservice.models.Application;
 
 public class XposedService implements IXposedService {
@@ -42,12 +41,12 @@ public class XposedService implements IXposedService {
     }
 
     @Override
-    public boolean setModuleScope(ParceledListSlice<Application> scope) throws RemoteException {
+    public boolean setModuleScope(List<Application> scope) throws RemoteException {
         return service.setModuleScope(scope);
     }
 
     @Override
-    public ParceledListSlice<Application> getModuleScope() throws RemoteException {
+    public List<Application> getModuleScope() throws RemoteException {
         return service.getModuleScope();
     }
 
