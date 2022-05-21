@@ -9,4 +9,5 @@ interface IXposedService {
     String getApi() = 4;
     boolean setModuleScope(in List<Application> scope) = 5;
     List<Application> getModuleScope() = 6;
+    List<String> getDenyListPackages() = 7;
 }
