@@ -5,7 +5,7 @@ pluginManagement {
         mavenCentral()
     }
     plugins {
-        id("com.android.library").version("7.0.0")
+        id("com.android.library") version "7.4.0"
     }
 }
 
@@ -16,5 +16,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 include(":service", ":interface")
 rootProject.name = "XposedService"

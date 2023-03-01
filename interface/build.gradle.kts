@@ -1,6 +1,8 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id("com.android.library")
 }
+
 val androidCompileSdkVersion: Int by rootProject.extra
 val androidBuildToolsVersion: String by rootProject.extra
 val androidTargetSdkVersion: Int by rootProject.extra
@@ -27,6 +29,8 @@ android {
         sourceCompatibility = androidSourceCompatibility
         targetCompatibility = androidTargetCompatibility
     }
+
+    namespace = "io.github.xposed.xposedservice"
 }
 
 dependencies {

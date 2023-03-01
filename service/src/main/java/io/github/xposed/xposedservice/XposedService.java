@@ -3,6 +3,8 @@ package io.github.xposed.xposedservice;
 import android.os.IBinder;
 import android.os.RemoteException;
 
+import java.util.List;
+
 import io.github.xposed.xposedservice.models.Application;
 
 public class XposedService implements IXposedService {
@@ -48,6 +50,11 @@ public class XposedService implements IXposedService {
     @Override
     public List<Application> getModuleScope() throws RemoteException {
         return service.getModuleScope();
+    }
+
+    @Override
+    public List<String> getDenyListPackages() throws RemoteException {
+        return service.getDenyListPackages();
     }
 
     @Override

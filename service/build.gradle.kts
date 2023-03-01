@@ -28,6 +28,8 @@ android {
         sourceCompatibility = androidSourceCompatibility
         targetCompatibility = androidTargetCompatibility
     }
+
+    namespace = "io.github.xposed.xposedservice"
 }
 
 dependencies {
