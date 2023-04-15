@@ -1,4 +1,3 @@
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id("com.android.library")
 }
@@ -11,6 +10,10 @@ val androidSourceCompatibility: JavaVersion by rootProject.extra
 val androidTargetCompatibility: JavaVersion by rootProject.extra
 
 android {
+    buildFeatures {
+        aidl = true
+    }
+
     compileSdk = androidCompileSdkVersion
     buildToolsVersion = androidBuildToolsVersion
 
